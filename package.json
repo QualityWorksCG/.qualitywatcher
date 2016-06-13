@@ -1,0 +1,36 @@
+{
+  "name": "qualitywatcher",
+  "version": "1.0.0",
+  "description": "Reporting node module for javascript tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QualityWorksCG/qualitywatcher.git"
+  },
+  "keywords": [
+    "nightwatch",
+    "webdriver",
+    "javascript",
+    "test",
+    "report"
+  ],
+  "author": "QualityWorks Consulting Group Jamaica (http://qualityworkscg.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QualityWorksCG/qualitywatcher/issues"
+  },
+  "homepage": "https://github.com/QualityWorksCG/qualitywatcher#readme",
+  "dependencies": {
+    "app-root-path": "1.0.0",
+    "exec": "0.2.1",
+    "dotenv": "1.2.0",
+    "fs": "0.0.2",
+    "jsonfile": "2.2.3",
+    "path": "0.12.7",
+    "request": "2.65.0",
+    "js-yaml": "3.4.3"
+  }
+}
