@@ -6,13 +6,14 @@ var index = require('../index');
 var setup = require('../lib/setup');
 var expect = require('chai').expect;
 var supertest = require('supertest');
-var api = supertest("http://localhost:3001");
+var api = supertest(process.env.QUALITYWATCHER_ENDPOINT_ROOT || "http://qualitywatcher.io");
 var getData = require('../lib/getData');
+var sendToQualitywatcher = require('../lib/sendToQualitywatcher');
 
 describe("Sending to QualityWatcher Test", function () {
 	var host;
 	beforeEach(function () {
-		host = process.env.QUALITYWATCHER_ENDPOINT;
+		host = process.env.QUALITYWATCHER_ENDPOINT || "http://qualitywatcher.io/tests";
 	});
 
 	afterEach(function () {
@@ -52,6 +53,39 @@ describe("Sending to QualityWatcher Test", function () {
 					done();
 				});
 		});
+	});
+
+	it("should test the sendToQualitywatcher function", function (done) {
+
+		var gitData = {
+			run_at: '2016-07-11T21:56:50.621Z',
+			repo_token: 12345,
+			service_name: 'local',
+			git:
+			{
+				head:
+				{
+					id: '1',
+					author_name: 'Quality Tester',
+					author_email: '',
+					committer_name: 'Quality Tester',
+					committer_email: '',
+					message: ''
+				},
+				branch: 'master',
+				remotes: [[]]
+			}
+		}
+
+		var data = {
+			results: {},
+			currentOptions: gitData
+		};
+		sendToQualitywatcher(data, function(err, data){
+			expect(err.detail.statusCode).to.be.equal(500);
+			expect(data).to.be.null;
+			done();
+		})
 	});
 });
 
