@@ -39,3 +39,5 @@ jspm_packages
 .env
 .coveralls.yml
 coverage
+dist
+.nyc_output

@@ -1,14 +1,15 @@
 
-var request = require('request');
-var should = require('should');
-var sinon = require('sinon');
-var index = require('../index');
-var setup = require('../lib/setup');
-var expect = require('chai').expect;
-var supertest = require('supertest');
+import request from 'request';
+import should from 'should';
+import sinon from 'sinon';
+import index from '../lib/index';
+import setup from '../lib/setup';
+import {expect} from 'chai';
+import supertest from 'supertest';
+import getData from '../lib/getData';
+import sendToQualitywatcher from '../lib/sendToQualitywatcher';
+
 var api = supertest(process.env.QUALITYWATCHER_ENDPOINT_ROOT || "http://qualitywatcher.io");
-var getData = require('../lib/getData');
-var sendToQualitywatcher = require('../lib/sendToQualitywatcher');
 
 describe("Sending to QualityWatcher Test", function () {
 	var host;

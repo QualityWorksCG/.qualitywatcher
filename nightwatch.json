@@ -9,7 +9,6 @@
   "parallel_process_delay" : 10,
   "disable_colors": false,
   "test_workers" : false,
-
   "selenium" : {
     "start_process" : true,
     "server_path" : "./node_modules/selenium-server-standalone-jar/jar/selenium-server-standalone-2.47.1.jar",
@@ -22,7 +21,6 @@
       "webdriver.firefox.profile" : ""
     }
   },
-
   "test_settings" : {
     "default" : {
       "launch_url" : "http://localhost",
