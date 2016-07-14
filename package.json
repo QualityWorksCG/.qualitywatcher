@@ -10,7 +10,9 @@
     "test": "nyc --require babel-core/register _mocha -- test/sendToQualitywatcher.js",
     "cover": "npm t && nyc report --reporter=text-lcov | coveralls",
     "prebuild": "rimraf dist",
-    "build": "babel --out-dir dist lib ",
+    "build": "npm-run-all --parallel build:*",
+    "build:lib": "babel --out-dir dist lib",
+    "build:bin": "babel --out-dir dist/bin bin",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -27,7 +29,8 @@
   "files": [
     "dist",
     "test",
-    "README.md"
+    "README.md",
+    "bin"
   ],
   "author": "QualityWorks Consulting Group Jamaica (http://qualityworkscg.com/)",
   "license": "MIT",
@@ -50,6 +53,7 @@
     "jshint": "2.9.2",
     "mocha": "2.3.3",
     "mocha-lcov-reporter": "1.0.0",
+    "npm-run-all": "2.3.0",
     "nyc": "7.0.0",
     "rimraf": "2.5.3",
     "semantic-release": "4.3.5",

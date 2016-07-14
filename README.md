@@ -12,9 +12,9 @@
 
 1. Sign up for an account at [QualityWatcher.io](http://qualitywatcher.io) using you BitBucket account. (Github coming soon)
 
-2. Navigate to the repositories page and start 'watching your project'
+2. Navigate to the repositories page, click on details for the project you wish to watch then ‘ADD TO WATCHLIST'
 
-![Start watching your project](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Start watching your project")
+![Start watching your project]( http://res.cloudinary.com/dzddmm3a8/image/upload/v1468518316/addtowatchlist.png "Start watching your project")
 
 
 3. Create a **.qualitywatcher.yml** in the root of your project and past your repo token as below
@@ -30,7 +30,7 @@ npm install qualitywatcher
 
 5. Add this script to your package.json
 ```
-"report": "./node_modules/nightwatch/bin/nightwatch | ./node_modules/qualitywatcher/bin/qualitywatcher.js"
+"report": "./node_modules/nightwatch/bin/nightwatch | ./node_modules/qualitywatcher/dist/bin/qualitywatcher.js"
 ```
 
 6. Use the following command to send your nightwatch test results to QualityWatcher.
