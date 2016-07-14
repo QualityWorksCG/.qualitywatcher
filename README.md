@@ -4,21 +4,24 @@
 [![npm Downloads](https://img.shields.io/npm/dt/qualitywatcher.svg)](https://www.npmjs.com/package/qualitywatcher)
 [![npm](https://img.shields.io/npm/l/qualitywatcher.svg)](https://www.npmjs.com/package/qualitywatcher)
 
- QualityWatcher is a reporting module for various test frameworks. Once your tests are complete, results are sent to your QualityWatcher dashboard at [QualityWatcher Application](qualitywatcher.io). QualityWatcher currently supports **Mocha**, **nightwatch.js** and **TestNG** frameworks with more options coming soon.
+ QualityWatcher is a reporting module for various test frameworks. Once your tests are complete, results are sent to your QualityWatcher dashboard at [QualityWatcher Application](qualitywatcher.io). QualityWatcher currently supports **Mocha** and **TestNG** frameworks with more options coming soon.
 
 ---
 
 ## How it works
 
-1. Sign up for an account at [QualityWatcher.io](qualitywatcher.io) using you BitBucket account. (Github coming soon)
+1. Sign up for an account at [QualityWatcher.io](http://qualitywatcher.io) using you BitBucket account. (Github coming soon)
 
 2. Navigate to the repositories page and start 'watching your project'
+
+![Start watching your project](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Start watching your project")
+
 
 3. Create a **.qualitywatcher.yml** in the root of your project and past your repo token as below
     
         repo_token: 12345 
 
-### For JavaScript projects
+### For JavaScript projects (Nightwatch)
 
 4. Install the module
 ```
@@ -37,14 +40,9 @@ npm run report
 
 ### For Java projects (TestNG)
 
-4. Send us a message at [QualityWorks Consulting Group](qualityworkcg.com) for help with configuring this setup.
+4. Send us a message at [QualityWatcher.io](http://qualitywatcher.io) for help with configuring this setup.
 
 ---
-
-## Test Command
-```
-npm test
-```
 
 
 
