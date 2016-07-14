@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/QualityWorksCG/qualitywatcher.svg)](https://travis-ci.org/QualityWorksCG/qualitywatcher)
 [![npm Downloads](https://img.shields.io/npm/dt/qualitywatcher.svg)](https://www.npmjs.com/package/qualitywatcher)
+[![Dependency Status](https://david-dm.org/qualityworkscg/qualitywatcher.svg)](https://david-dm.org/qualityworkscg/qualitywatcher)
 [![npm](https://img.shields.io/npm/l/qualitywatcher.svg)](https://www.npmjs.com/package/qualitywatcher)
 
  QualityWatcher is a reporting module for various test frameworks. Once your tests are complete, results are sent to your QualityWatcher dashboard at [QualityWatcher Application](qualitywatcher.io). QualityWatcher currently supports **Mocha** and **TestNG** frameworks with more options coming soon.
