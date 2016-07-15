@@ -29,8 +29,7 @@
   "files": [
     "dist",
     "test",
-    "README.md",
-    "bin"
+    "README.md"
   ],
   "author": "QualityWorks Consulting Group Jamaica (http://qualityworkscg.com/)",
   "license": "MIT",
