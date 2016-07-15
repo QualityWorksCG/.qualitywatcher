@@ -2,34 +2,38 @@
 import sendToQualitywatcher from '../sendToQualityWatcher';
 import setup from '../setup';
 
-setup.getConfigData(function(err, data){
-  if(err){
+setup.getConfigData(function (err, data) {
+  if (err) {
     //dont continue...
     throw err;
   }
-  else{
+  else {
     //console.log(data);
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
 
     var input = '';
 
-    process.stdin.on('data', function(chunk) {
-      if(data.qualitywatcher_config.output_on_console){
+    process.stdin.on('data', function (chunk) {
+      if (data.qualitywatcher_config.output_on_console) {
         console.log(chunk);
       }
       input += chunk;
     });
 
-    process.stdin.on('end', function() {
-        sendToQualitywatcher(input, function(err,data) {
-          if (err) {
-            console.log("There was an error sending data to qualitywatcher app. \n\n");
+    process.stdin.on('end', function () {
+      sendToQualitywatcher(input, function (err, data) {
+        if (err) {
+          console.log("There was an error sending data to qualitywatcher app. \n\n");
+          if (err.detail) {
             console.log(err.detail.body.err);
           }else{
-            console.log(data.msg);
+            console.log(err);
           }
-        });
+        } else {
+          console.log(data.msg);
+        }
+      });
     });
   }
 });
