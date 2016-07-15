@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import sendToQualitywatcher from '../sendToQualityWatcher';
-import setup from '../dist/setup';
+import setup from '../setup';
 
 setup.getConfigData(function(err, data){
   if(err){
