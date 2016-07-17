@@ -6,13 +6,13 @@
 [![Dependency Status](https://david-dm.org/qualityworkscg/qualitywatcher.svg)](https://david-dm.org/qualityworkscg/qualitywatcher)
 [![npm](https://img.shields.io/npm/l/qualitywatcher.svg)](https://www.npmjs.com/package/qualitywatcher)
 
- QualityWatcher is a reporting module for various test frameworks. Once your tests are complete, results are sent to your QualityWatcher dashboard at [QualityWatcher Application](qualitywatcher.io). QualityWatcher currently supports **Nightwatch** and **TestNG** frameworks with more options coming soon.
+ qualitywatcher is a reporting module for various test frameworks. Once your tests are complete, results are sent to your dashboard on [qualitywatcher.io](http://qualitywatcher.io). qualitywatcher currently supports **Nightwatch** and **TestNG** frameworks with more options coming soon.
 
 ---
 
 ## How it works
 
-* Sign up for an account at [QualityWatcher.io](http://qualitywatcher.io) using you BitBucket account. (Github coming soon)
+* Sign up for an account at [qualitywatcher.io](http://qualitywatcher.io) using you BitBucket account. (Github coming soon)
 
 * Navigate to the repositories page, click on details for the project you wish to watch then ‘ADD TO WATCHLIST'
 
@@ -26,7 +26,7 @@
 
 * Install the module
 ```
-npm install qualitywatcher
+npm install qualitywatcher --save-dev
 ```
 
 * Add this script to your package.json
@@ -41,7 +41,7 @@ npm run report
 
 ### For Java projects (TestNG)
 
-* Send us a message at [QualityWatcher.io](http://qualitywatcher.io) for help with configuring this setup.
+* Send us a message at [qualitywatcher.io](http://qualitywatcher.io) for help with configuring this setup.
 
 ---
 
