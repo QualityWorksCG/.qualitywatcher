@@ -17,6 +17,9 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "qw_report": "nightwatch | qualitywatcher"
   },
+  "bin": {
+    "qualitywatcher": "dist/bin/qualitywatcher.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/QualityWorksCG/qualitywatcher.git"
