@@ -1,0 +1,9 @@
+{
+    "urls": ["google.com"],        
+    "output_to_screen": true,        
+    "save_to_file": "./qm.json", 
+    "file_write_format": "a",              
+    "report_output": "./qm.html", 
+    "report_template":"./qmtemp.jade",
+    "whitelist": ["metrics.timeToFirstByte"]
+}
