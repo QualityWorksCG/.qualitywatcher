@@ -30,13 +30,13 @@ var qualitywatcher = function () {
         //status.start();
 
         clear();
-        console.log(chalk.cyan("-- 👀\tqualitywatcher.io project setup --\n"));
+        console.log(chalk.cyan("-- 👀\tqualitywatcher.com project setup --\n"));
 
         inquirer.prompt([
           {
             name: 'repo_token',
             type: 'input',
-            message: 'Enter your qualitywatcher.io repo token: ',
+            message: 'Enter your qualitywatcher.com repo token: ',
             validate: function (value) {
               var re = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
               var check = re.test(value);
@@ -51,7 +51,7 @@ var qualitywatcher = function () {
           {
             name: 'script_name',
             type: 'input',
-            message: 'What would you like your qualitywatcher.io script name to be: ',
+            message: 'What would you like your qualitywatcher.com script name to be: ',
             validate: function (value) {
               if (value.length) {
                 return true;

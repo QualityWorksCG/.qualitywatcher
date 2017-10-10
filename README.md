@@ -18,9 +18,10 @@
 
 ![Start watching your project]( http://res.cloudinary.com/dzddmm3a8/image/upload/v1468518316/addtowatchlist.png "Start watching your project")
 
-* Create a **.qualitywatcher.yml** in the root of your project and past your repo token as below
+* Create a **.qualitywatcher.yml** in the root of your project and past your repo token and domain name as below
     
-        repo_token: 12345 
+        repo_token: 12345
+        domain_namne: myqualitywatcherdomainname 
 
 ### For JavaScript projects (Nightwatch)
 

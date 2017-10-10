@@ -1,4 +1,3 @@
-
 import request from 'request';
 import should from 'should';
 import sinon from 'sinon';
@@ -9,12 +8,12 @@ import supertest from 'supertest';
 import getData from '../lib/getData';
 import sendToQualitywatcher from '../lib/sendToQualitywatcher';
 
-var api = supertest(process.env.QUALITYWATCHER_ENDPOINT_ROOT || "http://qualitywatcher.io");
+var api = supertest(process.env.QUALITYWATCHER_ENDPOINT_ROOT || "http://app.qualitywatcher.com");
 
 describe("Sending to QualityWatcher Test", function () {
 	var host;
 	beforeEach(function () {
-		host = process.env.QUALITYWATCHER_ENDPOINT || "http://qualitywatcher.io/tests";
+		host = process.env.QUALITYWATCHER_ENDPOINT || "http://app.qualitywatcher.com/tests";
 	});
 
 	afterEach(function () {
@@ -37,6 +36,7 @@ describe("Sending to QualityWatcher Test", function () {
 	});
 
 	it("should interact with application", function (done) {
+		this.timeout(15000);
 		getData.getCurrentOptions(function (err, gitData) {
 
 			var data = {
@@ -61,7 +61,8 @@ describe("Sending to QualityWatcher Test", function () {
 		var gitData = {
 			run_at: '2016-07-11T21:56:50.621Z',
 			repo_token: 12345,
-			service_name: 'local',
+      service_name: 'local',
+      domain_name: 'test',
 			git:
 			{
 				head:
@@ -80,7 +81,7 @@ describe("Sending to QualityWatcher Test", function () {
 
 		var data = {
 			results: {},
-			currentOptions: gitData
+      currentOptions: gitData
 		};
 		sendToQualitywatcher(data, function(err, data){
 			expect(err.detail.statusCode).to.be.equal(500);
