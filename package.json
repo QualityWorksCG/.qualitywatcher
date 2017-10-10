@@ -8,7 +8,7 @@
     "check-coverage": "nyc check-coverage --statements 0 --branches 0 --functions 0 --lines 0",
     "pretest": "jshint lib",
     "test": "nyc --require babel-core/register _mocha -- test/sendToQualitywatcher.js",
-    "cover": "npm t && nyc report --reporter=text-lcov | coveralls",
+    "cover": "npm t && nyc report --reporter=text-lcov",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
     "build:lib": "babel --out-dir dist lib",
