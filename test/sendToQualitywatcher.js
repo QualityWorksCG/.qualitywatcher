@@ -8,12 +8,12 @@ import supertest from 'supertest';
 import getData from '../lib/getData';
 import sendToQualitywatcher from '../lib/sendToQualitywatcher';
 
-var api = supertest(process.env.QUALITYWATCHER_ENDPOINT_ROOT || "http://app.qualitywatcher.com");
+var api = supertest(process.env.QUALITYWATCHER_ENDPOINT_ROOT || "http://www.app.qualitywatcher.com");
 
 describe("Sending to QualityWatcher Test", function () {
 	var host;
 	beforeEach(function () {
-		host = process.env.QUALITYWATCHER_ENDPOINT || "http://app.qualitywatcher.com/tests";
+		host = process.env.QUALITYWATCHER_ENDPOINT || "http://www.app.qualitywatcher.com/tests";
 	});
 
 	afterEach(function () {
@@ -36,7 +36,7 @@ describe("Sending to QualityWatcher Test", function () {
 	});
 
 	it("should interact with application", function (done) {
-		this.timeout(15000);
+		
 		getData.getCurrentOptions(function (err, gitData) {
 
 			var data = {
